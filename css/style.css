@@ -17,7 +17,8 @@
 }
 /*header*/
 .welcome {
-  height: 449px;
+  padding-top: 28px;
+  padding-bottom: 145px;
   width: 100%;
   background-image: url("../images/banner-bg.jpg");
   background-repeat: no-repeat;
@@ -47,7 +48,6 @@
 }
 .box {
   display: flex;
-  padding-top: 28px;
   align-items: center;
   justify-content: space-between;
   bottom: 0;
@@ -68,17 +68,19 @@
 li {
   display: inline;
 }
-
-a {
-  text-decoration: none;
+.menu-link {
   color: white;
   font-size: 13px;
   font-weight: normal;
   text-transform: uppercase;
 }
+a {
+  text-decoration: none;
+}
 .hello {
   display: flex;
   justify-content: center;
+  margin-top: 136px;
 }
 .welcome-title {
   z-index: 2;
@@ -86,7 +88,6 @@ a {
   font-size: 45px;
   color: #ffffff;
   text-align: center;
-  margin-top: 136px;
   font-weight: bold;
   width: 735px;
 }
@@ -99,12 +100,12 @@ a {
 .card {
   font-family: Open Sans, Arial, sans-serif;
   display: flex;
+  margin-top: 63px;
 }
 .cardtext {
-  padding-left: 30px;
+  margin-left: 30px;
 }
 .news-photo {
-  margin-top: 63px;
   max-width: 381px;
 }
 
@@ -126,16 +127,17 @@ a {
 }
 .card-name {
   text-transform: uppercase;
-  padding-top: 15px;
+  margin-top: 15px;
   display: flex;
   width: 282px;
+  color: black;
 }
 .card-date {
   color: #989898;
   font-size: 12px;
 }
 .signature {
-  padding-left: 16px;
+  margin-left: 16px;
   font-weight: bold;
   font-size: 12px;
 }
@@ -148,16 +150,16 @@ a {
 /*section2*/
 .rightside {
   display: flex;
-  padding-top: 63px;
+  margin-top: 63px;
   flex-direction: column;
   align-items: flex-end;
 }
 .minicard-header {
-  padding-left: 18px;
+  margin-left: 18px;
 }
 .minicard {
   display: flex;
-  padding-top: 23px;
+  margin-top: 23px;
   bottom: 60px;
 }
 .date {
@@ -171,6 +173,7 @@ a {
   text-transform: uppercase;
   font-family: Open Sans, Arial, sans-serif;
   font-size: 14px;
+  color: black;
 }
 .posts-name {
   text-transform: uppercase;
@@ -181,7 +184,7 @@ a {
   text-align: center;
   position: relative;
   flex-direction: column;
-  padding-bottom: 14px;
+  margin-bottom: 14px;
   justify-content: center;
 }
 .posts-name::after {
@@ -203,6 +206,10 @@ a {
   padding: 16px 35px 16px 20px;
   background-color: #f4f7f6;
 }
+
+.submit {
+  margin-bottom: 62px;
+}
 .button {
   color: #ffffff;
   display: block;
@@ -213,7 +220,6 @@ a {
   background-color: #b59f5b;
   font-size: 12px;
   text-transform: uppercase;
-  margin-bottom: 62px;
 }
 .list {
   display: flex;
@@ -225,8 +231,8 @@ a {
 .tags-list {
   display: flex;
   font-family: Open Sans, Arial, sans-serif;
-  padding-left: 13px;
-  padding-right: 13px;
+  margin-left: 13px;
+  margin-right: 13px;
   flex-wrap: wrap;
   width: 272px;
 }
@@ -261,7 +267,6 @@ a {
   font-weight: bold;
   color: #0f0d0e;
   font-family: Open Sans, Arial, sans-serif;
-  font-style: regular;
   list-style-type: none;
   text-transform: inherit;
 }
@@ -278,8 +283,8 @@ a {
   font-size: 12px;
   font-family: Open Sans, Arial, sans-serif;
   font-weight: bold;
-  padding-left: 4px;
-  padding-bottom: 21px;
+  margin-left: 4px;
+  margin-bottom: 21px;
 }
 .form-hint {
   display: block;
@@ -349,11 +354,8 @@ a {
 }
 .socials {
   list-style: none;
-  padding-left: 0;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 19px;
-  padding-bottom: 19px;
+  margin-top: 19px;
+  margin-bottom: 19px;
 }
 .socials-item {
   margin-left: 5px;
@@ -368,7 +370,7 @@ a {
   background-position: center center;
   position: relative;
   display: inline-block;
-  padding: 5px;
+  margin: 5px;
 }
 .socials-link-twitter {
   background-image: url(../svg/004-twitter.svg);
@@ -412,7 +414,7 @@ a {
   flex-wrap: wrap;
 }
 .trend1 {
-  width: 24.7%;
+  width: 24.8125%;
   margin-right: 0.25%;
   background-image: url("../images/trend1.jpg");
   background-repeat: no-repeat;
@@ -604,12 +606,14 @@ a {
   display: flex;
 }
 p {
+ 
   margin-top: 0;
   line-height: 1.5;
 }
 /*картинка*/
 
 .products {
+ 
   padding-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
@@ -708,13 +712,14 @@ p {
   margin-top: 15px;
   line-height: 1.2;
 }
-
+.name-trends-categories {
+  margin-right: 20px;
+}
 .trend-class-link {
   text-transform: uppercase;
   color: #b59f5b;
   font-size: 14px;
   font-weight: bold;
-  margin-right: 20px;
 }
 
 /*popup*/
@@ -742,6 +747,7 @@ p {
 }
 
 .popup__container {
+  /*  border: 390px 590px;*/
   border: 1px solid black;
   width: 390px;
   height: 590px;
@@ -830,8 +836,13 @@ p {
   .trend2,
   .trend3,
   .trend4 {
-    width: 49.625%;
+    width: 49.825%;
   }
+  .trend2,
+  .trend4 {
+    margin-right: 0;
+  }
+
   .trends {
     min-width: 641px;
   }
@@ -852,6 +863,7 @@ p {
     background-image: url("../images/banner-bg-tablet.jpg");
   }
 }
+
 @media (min-width: 641px) and (max-width: 1200px) and (orientation: landscape) {
   .trend1,
   .trend2,
@@ -904,7 +916,8 @@ p {
   .trend2,
   .trend3,
   .trend4 {
-    width: 99.25%;
+    width: 100%;
+    margin-right: 0;
   }
   .trends {
     min-width: 340px;
