@@ -74,8 +74,10 @@ li {
   font-weight: normal;
   text-transform: uppercase;
 }
+
 a {
   text-decoration: none;
+  color: white;
 }
 .hello {
   display: flex;
@@ -96,10 +98,17 @@ a {
 .main {
   display: flex;
   justify-content: space-between;
+  padding-top: 63px;
 }
+.news {
+  width: 75%;
+}
+
 .card {
   font-family: Open Sans, Arial, sans-serif;
   display: flex;
+}
+.card:nth-child(n + 2) {
   margin-top: 63px;
 }
 .cardtext {
@@ -110,26 +119,26 @@ a {
 }
 
 .heading-link {
-  margin-top: 63px;
   text-transform: uppercase;
   color: #b59f5b;
   font-size: 14px;
-  word-spacing: 12px;
+  /*word-spacing: 12px;*/
   font-weight: bold;
 }
 .heading {
-  margin-top: 63px;
   text-transform: uppercase;
   color: #b59f5b;
   font-size: 14px;
-  word-spacing: 12px;
+  /*word-spacing: 12px;*/
   font-weight: bold;
+}
+.heading-list-item:nth-child(n + 2) {
+  margin-left: 12px;
 }
 .card-name {
   text-transform: uppercase;
   margin-top: 15px;
   display: flex;
-  width: 282px;
   color: black;
 }
 .card-date {
@@ -150,9 +159,10 @@ a {
 /*section2*/
 .rightside {
   display: flex;
-  margin-top: 63px;
+  /* margin-top: 63px;*/
   flex-direction: column;
   align-items: flex-end;
+  width: 25%;
 }
 .minicard-header {
   margin-left: 18px;
@@ -207,8 +217,11 @@ a {
   background-color: #f4f7f6;
 }
 
-.submit {
+.form-row {
   margin-bottom: 62px;
+}
+.form-row-text {
+  margin-top: 30px;
 }
 .button {
   color: #ffffff;
@@ -226,6 +239,9 @@ a {
   flex-wrap: wrap;
   align-content: space-between;
   margin-top: 25px;
+}
+
+.tags {
   margin-bottom: 60px;
 }
 .tags-list {
@@ -235,6 +251,7 @@ a {
   margin-right: 13px;
   flex-wrap: wrap;
   width: 272px;
+  text-transform: uppercase;
 }
 .tags-list-item {
   display: flex;
@@ -349,13 +366,13 @@ a {
 .articles-socials {
   background-color: #eeeeee;
   text-align: center;
-  margin-top: 70px;
+  margin-top: 60px;
   width: 100%;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 .socials {
   list-style: none;
-  margin-top: 19px;
-  margin-bottom: 19px;
 }
 .socials-item {
   margin-left: 5px;
@@ -413,27 +430,19 @@ a {
   align-content: center;
   flex-wrap: wrap;
 }
-.trend1 {
-  width: 24.8125%;
-  margin-right: 0.25%;
+.trend1pic {
   background-image: url("../images/trend1.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-content: flex-end;
-  border-top: 1px solid #9b9c8f;
-  border-bottom: 1px solid #9b9c8f;
-  position: relative;
-  height: 320px;
 }
-.trend1::before,
-.trend2::before,
-.trend3::before,
-.trend4::before {
+.trend2pic {
+  background-image: url("../images/trend2.jpg");
+}
+.trend3pic {
+  background-image: url("../images/trend3.jpg");
+}
+.trend4pic {
+  background-image: url("../images/trend4.jpg");
+}
+.trend::before {
   background-color: #000000;
   content: "";
   position: absolute;
@@ -444,10 +453,8 @@ a {
   opacity: 0.6;
 }
 
-.trend2 {
+.trend {
   width: 24.8125%;
-  margin-right: 0.25%;
-  background-image: url("../images/trend2.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -462,39 +469,10 @@ a {
   height: 320px;
 }
 
-.trend3 {
-  width: 24.8125%;
-  margin-right: 0.25%;
-  background-image: url("../images/trend3.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-content: flex-end;
-  border-top: 1px solid #9b9c8f;
-  border-bottom: 1px solid #9b9c8f;
-  position: relative;
-  height: 320px;
-}
-
-.trend4 {
-  width: 24.8125%;
-  background-image: url("../images/trend4.jpg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-content: flex-end;
-  border-top: 1px solid #9b9c8f;
-  border-bottom: 1px solid #9b9c8f;
-  position: relative;
-  height: 320px;
+@media (min-width: 641px) {
+  .trend:nth-child(-n + 3) {
+    margin-right: 0.25%;
+  }
 }
 
 .post-name {
@@ -544,6 +522,7 @@ a {
   font-family: Open Sans, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: bold;
+  padding-top: 25px;
 }
 .product__price {
   font-size: 20px;
@@ -569,9 +548,7 @@ a {
 }
 /*кнопка*/
 .product__button {
-  border: none;
   background-color: #b59f5b;
-  cursor: pointer;
   text-transform: uppercase;
   font-family: Open Sans, Arial, sans-serif;
   font-size: 14px;
@@ -579,7 +556,6 @@ a {
   color: white;
   padding: 20px 25px;
   margin-top: 20px;
-  width: 140px;
 }
 
 /**/
@@ -606,14 +582,12 @@ a {
   display: flex;
 }
 p {
- 
   margin-top: 0;
   line-height: 1.5;
 }
 /*картинка*/
 
 .products {
- 
   padding-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
@@ -711,9 +685,10 @@ p {
   letter-spacing: normal;
   margin-top: 15px;
   line-height: 1.2;
+  z-index: 1;
 }
-.name-trends-categories {
-  margin-right: 20px;
+.name-trends-categories:nth-child(n + 2) {
+  margin-left: 20px;
 }
 .trend-class-link {
   text-transform: uppercase;
@@ -739,6 +714,7 @@ p {
   margin: 100px auto 0px auto;
   width: 390px;
   padding: 10px;
+  align-self: center;
 }
 .link {
   width: 100%;
@@ -747,11 +723,10 @@ p {
 }
 
 .popup__container {
-  /*  border: 390px 590px;*/
   border: 1px solid black;
-  width: 390px;
-  height: 590px;
   background: white;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .feed-back_header {
@@ -763,7 +738,7 @@ p {
   text-align: center;
   position: relative;
   flex-direction: column;
-  padding-bottom: 32px;
+
   justify-content: center;
   margin-top: 55px;
 }
@@ -781,10 +756,7 @@ p {
   font-weight: 400;
   margin-bottom: 13px;
 }
-.form {
-  margin-right: 30px;
-  margin-left: 30px;
-}
+
 .select {
   box-sizing: border-box;
   display: block;
@@ -797,7 +769,6 @@ p {
   background-color: #f4f7f6;
   font-family: OpenSans-Regular;
   color: #767676;
-  margin-bottom: 38px;
 }
 
 .radio-group {
@@ -805,8 +776,11 @@ p {
   font-weight: 400;
   border-color: black;
 }
+/**/
+
+/**/
 .form-hin {
-  margin-top: 38px;
+  margin-top: 26px;
   font-size: 13px;
   font-weight: 400;
   margin-bottom: 13px;
@@ -817,7 +791,15 @@ p {
   height: 131px;
   width: 329px;
   border-color: #f4f7f6;
+  resize: none;
+  margin-top: 12px;
 }
+.rbut {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+}
+
 .popup-button {
   margin-bottom: 55px;
   width: 330px;
@@ -832,14 +814,10 @@ p {
 }
 
 @media (min-width: 641px) and (max-width: 1200px) and (orientation: portrait) {
-  .trend1,
-  .trend2,
-  .trend3,
-  .trend4 {
+  .trend {
     width: 49.825%;
   }
-  .trend2,
-  .trend4 {
+  .trend:nth-child(2n) {
     margin-right: 0;
   }
 
@@ -865,10 +843,7 @@ p {
 }
 
 @media (min-width: 641px) and (max-width: 1200px) and (orientation: landscape) {
-  .trend1,
-  .trend2,
-  .trend3,
-  .trend4 {
+  .trend {
     width: 24.813%;
   }
   .trends {
@@ -894,7 +869,6 @@ p {
     font-size: 17px;
   }
 }
-/*.trend2, .trend3, .trend4*/
 
 @media (max-width: 640px) {
   .main {
@@ -912,12 +886,8 @@ p {
     display: flex;
     flex-direction: column;
   }
-  .trend1,
-  .trend2,
-  .trend3,
-  .trend4 {
+  .trend {
     width: 100%;
-    margin-right: 0;
   }
   .trends {
     min-width: 340px;
