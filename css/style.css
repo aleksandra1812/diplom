@@ -699,7 +699,7 @@ p {
 
 /*popup*/
 .popup {
-  /*visibility: hidden;*/
+  visibility: hidden;
   width: 100%;
   min-height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
