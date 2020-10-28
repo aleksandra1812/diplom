@@ -66,6 +66,7 @@
 .menu-list-item:nth-child(n + 2) {
   margin-left: 38px;
 }
+
 li {
   display: inline;
 }
@@ -205,6 +206,7 @@ a {
 }
 .search-label {
   width: 100%;
+  background-color: #f4f7f6;
 }
 .field-email {
   margin-top: 24px;
@@ -212,6 +214,7 @@ a {
   width: 272px;
   border: 1px solid #f4f7f6;
   padding: 16px 35px 16px 20px;
+  outline: none;
   background-color: #f4f7f6;
 }
 
@@ -328,6 +331,7 @@ a {
   display: flex;
   margin-top: 54px;
   margin-bottom: 62px;
+  box-sizing: border-box;
 }
 .subscribe-search {
   position: relative;
@@ -335,12 +339,12 @@ a {
 }
 .recent-search input[type="text"] {
   padding: 16px 35px 16px 20px;
-
   height: 48px;
   box-sizing: border-box;
   background-color: #f4f7f6;
-  border: none;
+  border: 1px solid #f4f7f6;
   outline: none;
+  width: 100%;
 }
 .recent-search .subscribe-search {
   background-image: url(../svg/search.svg);
@@ -747,6 +751,7 @@ p {
   padding: 10px 20px;
   cursor: pointer;
   outline: none;
+  border: 1px solid #f4f7f6;
 }
 
 .radio {
@@ -833,6 +838,8 @@ p {
   border: none;
   resize: none;
   margin-top: 12px;
+  outline: none;
+  border: 1px solid #f4f7f6;
 }
 .rbut {
   width: 30px;
@@ -948,3 +955,51 @@ p {
     font-size: 17px;
   }
 }
+/*---------------------------*/
+/*hover and focus*/
+.menu-list-item:hover,
+.trend-class-link:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 1px;
+}
+
+.trenda:hover,
+.categories-list:hover,
+.card-name:hover {
+  color: #b59f5b;
+}
+
+.btn-color:hover,
+.button:hover,
+.popup-button:hover,
+.product__button:hover {
+  background-color: #323232;
+}
+.field-email:focus,
+.select:focus,
+.field-textarea:focus {
+  border: 1px solid #b59f5b;
+}
+
+.recent-search input[type="text"]:focus {
+  border: 1px solid #b59f5b;
+  border-right: none;
+}
+
+.tags-list-item:hover {
+  text-shadow: 0 0 1px;
+  border: 3px solid #b59f5b;
+}
+
+.heading-link:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 1px;
+}
+
+.product__description:hover {
+  text-shadow: 0 0 1px;
+}
+.product-description-link-text:hover {
+  text-decoration: underline;
+}
+/*---------------------------*/
